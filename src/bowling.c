@@ -21,18 +21,23 @@ int score()
     int score = 0;
     int rolls_index = 0;
 
-    for(int frame = 0; frame < 10; frame++)
+    for (int frame = 0; frame < 10; frame++)
     {
-        if (rolls[rolls_index] + rolls[rolls_index + 1] == 10)
+        if (rolls[rolls_index] == 10)
+        {
+            score += 10 + rolls[rolls_index + 1] + rolls[rolls_index + 2];
+            rolls_index++;
+        }
+        else if (rolls[rolls_index] + rolls[rolls_index + 1] == 10)
         {
             score += 10 + rolls[rolls_index + 2];
+            rolls_index += 2;
         }
         else
         {
             score += rolls[rolls_index] + rolls[rolls_index + 1];
+            rolls_index += 2;
         }
-
-        rolls_index += 2;
     }
 
     return score;
