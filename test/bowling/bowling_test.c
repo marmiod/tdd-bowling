@@ -34,3 +34,11 @@ TEST(bowling, AllOnes)
     roll_multiple(20, 1);
     TEST_ASSERT_EQUAL(20, score());
 }
+
+TEST(bowling, Spare)
+{
+    roll(5);
+    roll(5);
+    roll_multiple(18, 1);
+    TEST_ASSERT_EQUAL(29, score());
+}
