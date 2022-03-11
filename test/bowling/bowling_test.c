@@ -15,6 +15,7 @@ void roll_multiple(int num_rolls, int pins)
 TEST_SETUP(bowling)
 {
     /* Init before every test */
+    init();
 }
 
 TEST_TEAR_DOWN(bowling)

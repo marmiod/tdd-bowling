@@ -5,6 +5,11 @@
 static int rolls[MAX_ROLLS] = {0};
 static int current_roll = 0;
 
+void init()
+{
+    current_roll = 0;
+}
+
 void roll(int pins)
 {
     rolls[current_roll] = pins;
@@ -15,7 +20,7 @@ int score()
 {
     int score = 0;
 
-    for(int i; i < MAX_ROLLS; i++)
+    for(int i = 0; i < MAX_ROLLS; i++)
     {
         score += rolls[i];
     }
