@@ -33,7 +33,7 @@
         {
             "type": "shell",
             "label": "run bowling_test",
-            "command": "./bowling_test.exe",
+            "command": "./bowling_test",
             "args": [],
             "options": {
                 "cwd": "${workspaceFolder}/test/bowling/out"
