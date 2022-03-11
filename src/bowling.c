@@ -19,10 +19,20 @@ void roll(int pins)
 int score()
 {
     int score = 0;
+    int rolls_index = 0;
 
-    for(int i = 0; i < MAX_ROLLS; i++)
+    for(int frame = 0; frame < 10; frame++)
     {
-        score += rolls[i];
+        if (rolls[rolls_index] + rolls[rolls_index + 1] == 10)
+        {
+            score += 10 + rolls[rolls_index + 2];
+        }
+        else
+        {
+            score += rolls[rolls_index] + rolls[rolls_index + 1];
+        }
+
+        rolls_index += 2;
     }
 
     return score;
