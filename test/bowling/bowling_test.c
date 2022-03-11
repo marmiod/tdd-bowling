@@ -40,12 +40,39 @@ TEST(bowling, Spare)
     roll(5);
     roll(5);
     roll_multiple(18, 1);
-    TEST_ASSERT_EQUAL(29, score());
+    TEST_ASSERT_EQUAL((10 + 1) + 18, score());
 }
 
 TEST(bowling, Strike)
 {
     roll(10);
     roll_multiple(18, 1);
-    TEST_ASSERT_EQUAL(30, score());
+    TEST_ASSERT_EQUAL((10 + 1 + 1) + 18, score());
+}
+
+TEST(bowling, TwoSpares)
+{
+    roll(5);
+    roll(5);
+    roll(5);
+    roll(5);
+    roll_multiple(16, 1);
+    TEST_ASSERT_EQUAL((10 + 5) + (10 + 1) + 16, score());
+}
+
+TEST(bowling, TwoStrikes)
+{
+    roll(10);
+    roll(10);
+    roll_multiple(16, 1);
+    TEST_ASSERT_EQUAL((10 + 10 + 1) + (10 + 1 + 1) + 16, score());
+}
+
+TEST(bowling, SpareAndStrike)
+{
+    roll(6);
+    roll(4);
+    roll(10);
+    roll_multiple(16, 1);
+    TEST_ASSERT_EQUAL((10 + 10) + (10 + 1 + 1) + 16, score());
 }

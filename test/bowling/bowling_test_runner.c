@@ -7,4 +7,7 @@ TEST_GROUP_RUNNER(bowling)
    RUN_TEST_CASE(bowling, AllOnes);
    RUN_TEST_CASE(bowling, Spare);
    RUN_TEST_CASE(bowling, Strike);
+   RUN_TEST_CASE(bowling, TwoSpares);
+   RUN_TEST_CASE(bowling, TwoStrikes);
+   RUN_TEST_CASE(bowling, SpareAndStrike);
 }
