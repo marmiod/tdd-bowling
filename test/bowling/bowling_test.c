@@ -27,3 +27,9 @@ TEST(bowling, AllZeros)
     roll_multiple(20, 0);
     TEST_ASSERT_EQUAL(0, score());
 }
+
+TEST(bowling, AllOnes)
+{
+    roll_multiple(20, 1);
+    TEST_ASSERT_EQUAL(20, score());
+}
