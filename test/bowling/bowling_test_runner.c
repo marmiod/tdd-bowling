@@ -6,4 +6,5 @@ TEST_GROUP_RUNNER(bowling)
    RUN_TEST_CASE(bowling, AllZeros);
    RUN_TEST_CASE(bowling, AllOnes);
    RUN_TEST_CASE(bowling, Spare);
+   RUN_TEST_CASE(bowling, Strike);
 }

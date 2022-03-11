@@ -42,3 +42,10 @@ TEST(bowling, Spare)
     roll_multiple(18, 1);
     TEST_ASSERT_EQUAL(29, score());
 }
+
+TEST(bowling, Strike)
+{
+    roll(10);
+    roll_multiple(18, 1);
+    TEST_ASSERT_EQUAL(30, score());
+}
