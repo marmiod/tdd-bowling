@@ -10,4 +10,7 @@ TEST_GROUP_RUNNER(bowling)
    RUN_TEST_CASE(bowling, TwoSpares);
    RUN_TEST_CASE(bowling, TwoStrikes);
    RUN_TEST_CASE(bowling, SpareAndStrike);
+   RUN_TEST_CASE(bowling, SpareInTheLastRound);
+   RUN_TEST_CASE(bowling, StrikeInTheLastRound);
+   RUN_TEST_CASE(bowling, MaximumScore);
 }

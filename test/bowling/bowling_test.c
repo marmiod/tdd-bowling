@@ -76,3 +76,27 @@ TEST(bowling, SpareAndStrike)
     roll_multiple(16, 1);
     TEST_ASSERT_EQUAL((10 + 10) + (10 + 1 + 1) + 16, score());
 }
+
+TEST(bowling, SpareInTheLastRound)
+{
+    roll_multiple(18, 1);
+    roll(5);
+    roll(5);
+    roll(5);
+    TEST_ASSERT_EQUAL(18 + 15, score());
+}
+
+TEST(bowling, StrikeInTheLastRound)
+{
+    roll_multiple(18, 1);
+    roll(10);
+    roll(5);
+    roll(5);
+    TEST_ASSERT_EQUAL(18 + 20, score());
+}
+
+TEST(bowling, MaximumScore)
+{
+    roll_multiple(21, 10);
+    TEST_ASSERT_EQUAL(10 * 30, score());
+}
